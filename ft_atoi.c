@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 20:37:19 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 21:14:02 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/10 16:41:10 by gryongfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,27 @@
 
 int	ft_atoi(const char	*str)
 {
-	int	i;
-	int	minus;
-	int a;
+	int	num;
+	int	negative;
 
-	if (!str)
-		return (0);
-	i = 0;
-	while ((str[i] == '\t') || (str[i] == '\n') || (str[i] == '\v') || 
-					(str[i] == '\f') || (str[i] == '\r') || (str[i] == ' '))
+	num = 0;
+	negative = 0;
+	while (*str == '\t' || *str == '\n' || *str == '\v' || 
+					*str == '\f' || *str == '\r' || *str == ' ')
 
-		i++;
-	minus = (str[i] == '-') ? -1 : 1;
-	if (minus == -1 || str[i] == '+')
-		i++;
-	a = 0;
-	while (0 <=str[i] && str[i] <= '9')
-		a = (a * 10) + (str[i++] - '0');
-	return (a * minus);
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			negative++;
+		str++;
+	}
+	while ('0' <= *str && *str <= '9')
+	{
+		num = (num * 10) + (*str - '0');
+		str++;
+	}
+	if (negative)
+		return (-num);
+	return (num);
 }

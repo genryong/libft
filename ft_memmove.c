@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:25:32 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 21:09:17 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/08 01:01:50 by gryongfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 
 void    *ft_memmove(void    *dest, const void   *src, size_t	n)
 {
-	char	*tmp;
+	char	*d;
 	char	const *s;
-	size_t 	i;
 
 	if (dest < src)
 	{
-		ft_memcopy(dest, src, n);
+		ft_memcpy(dest, src, n);
 	}else
 	{
-		i = 0;
 
-		tmp = (char*)dest;
+		d = (char*)dest;
 		s = (char*)src;
 
-		while (i < n)
+		d = d + n - 1;
+		s = s + n - 1;
+
+		while (n--)
 		{
-			*tmp++ = *s++;
-			i++;
+			*d-- = *s--;
 		}
 	}
 	return (dest);

@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:06:18 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 19:45:56 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/08 01:05:53 by gryongfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_isdigit(int c)
 {
-    if(0 <= c && c <= 9)
+    if('0' <= c && c <= '9')
         return(1);
     return(0);
 }

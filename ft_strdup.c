@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:06 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 21:15:13 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/11 15:24:36 by gryongfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,16 @@
 char	*ft_strdup(const char	*s1)
 {
 	char	*str;
-	size_t i;
+	char	*s;
 
 	if (!s1)
-		return (0);
-	str = ((char*)malloc(ft_strlen(s1) + 1));
+		return  (NULL);
+	str = ((char*)malloc(sizeof(char) * ft_strlen(s1) + 1));
 	if (!str)
-		return (0);
-	
-	i = 0;
-	
-	while(!s1[i])
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	str[i] = 0;
+		return (NULL);
+	s = str;
+	while(*s1)
+		*s++ = *s1++;
+	*s = '\0'; 		
 	return (str);
 }

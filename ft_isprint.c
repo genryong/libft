@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 01:31:10 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 19:46:00 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/08 01:19:01 by gryongfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_isprint(int  c)
 {
-    if(32 <= c && c <= 127)
+    if(32 <= c && c <= 126)
         return(1);
     return(0);
 }

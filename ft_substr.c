@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 01:48:51 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 21:15:33 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/11 15:33:56 by gryongfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 char	*ft_substr(char	const *s, unsigned int	strat, size_t	len)
 {
 	char	*str;
+	char	*new;
 	size_t i;
 	size_t x;
 
@@ -26,15 +27,16 @@ char	*ft_substr(char	const *s, unsigned int	strat, size_t	len)
 
 	i = 0;
 	x = 0;
+	new = str;
 	while (s[i])
 	{
 		if (strat <= i && x < len)
 		{
-			str[x] = s[i];
+			new[x] = s[i];
 			x++;
 		}
 		i++;
 	}
-	str[x] = 0;
+	new[x] = '\0';
 	return (str);
 }
