@@ -6,20 +6,18 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 01:58:56 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 21:08:17 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/15 06:06:36 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-size_t    ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while(str[i] != '\0')
-        i++;
-    return(i);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

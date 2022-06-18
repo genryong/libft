@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 20:37:19 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/10 16:41:10 by gryongfa         ###   ########.fr       */
+/*   Updated: 2022/06/18 15:17:28 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ int	ft_atoi(const char	*str)
 
 	num = 0;
 	negative = 0;
-	while (*str == '\t' || *str == '\n' || *str == '\v' || 
-					*str == '\f' || *str == '\r' || *str == ' ')
-
+	while (*str == '\t' || *str == '\n' || *str == '\v'
+		||*str == '\f' || *str == '\r' || *str == ' ')
 		str++;
 	if (*str == '-' || *str == '+')
 	{

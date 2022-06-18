@@ -6,15 +6,15 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 01:31:10 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/08 01:19:01 by gryongfa         ###   ########.fr       */
+/*   Updated: 2022/06/15 05:24:29 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int  c)
+int	ft_isprint(int c)
 {
-    if(32 <= c && c <= 126)
-        return(1);
-    return(0);
+	if (32 <= c && c <= 126)
+		return (1);
+	return (0);
 }

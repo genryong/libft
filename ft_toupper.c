@@ -6,15 +6,15 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 01:49:34 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 19:48:19 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/15 06:28:26 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int  c)
+int	ft_toupper(int c)
 {
-    if('a' <= c && c <= 'z')
-        c -= 32;
-    return (c);
+	if ('a' <= c && c <= 'z')
+		c -= 32;
+	return (c);
 }

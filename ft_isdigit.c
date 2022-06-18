@@ -6,15 +6,15 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:06:18 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/08 01:05:53 by gryongfa         ###   ########.fr       */
+/*   Updated: 2022/06/15 05:24:07 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if('0' <= c && c <= '9')
-        return(1);
-    return(0);
+	if ('0' <= c && c <= '9')
+		return (1);
+	return (0);
 }

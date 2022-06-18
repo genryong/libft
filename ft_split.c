@@ -6,82 +6,83 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 02:54:06 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/06 21:25:54 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/18 14:13:25 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static	int	count(char	const *s, char	c)
+static	int	count(char	const *s, char c)
 {
-	int	words;
-	int	i;
+	size_t	words;
+	size_t	i;
 
 	words = 0;
 	i = 0;
-	if (!s)
-		return (0);
-	if (s[i] != c)
-	{
-		i++;
-		words++;
-	}
 	while (s[i] != '\0')
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == 0))
 			words++;
 		i++;
 	}
 	return (words);
 }
 
-static char	*string(char	const *s, char	c)
+static	void	*free_str(char	**str, size_t	n)
 {
-	char	*word;
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	word = (char	*)malloc(sizeof(char) * (i + 1));
-	if (!word)
-		return (0);
-	i = 0;
-	while (s[i] && s[i] != c)
+	while (i < n)
 	{
-		word[i] = s[i];
+		free(str[i]);
 		i++;
 	}
-	word[i] = '\0';
-	return (word);
+	free(str);
+	return (NULL);
 }
 
-char	**ft_split(char	const *s, char	c)
+static char	**split(char	**str, const char	*s, char c, size_t n_str)
 {
-	char	**split;
-	int	num;
-	int	i;
+	size_t	i;
+	size_t	j;
+	size_t	len;
+
+	i = 0;
+	j = 0;
+	while (i < n_str)
+	{
+		len = 0;
+		while (s[j] && s[j] == c)
+			j++;
+		while (s[j] && s[j] != c)
+		{
+			len++;
+			j++;
+		}
+		str[i] = (char *)malloc(sizeof(char) * len + 1);
+		if (!str[i])
+			return (free_str(str, i));
+		ft_strlcpy(str[i], &s[j - len], len + 1);
+		i++;
+	}
+	return (str);
+}
+
+char	**ft_split(char	const *s, char c)
+{
+	char	**str;
+	size_t	n_str;
 
 	if (!s)
-		return (0);
-	num = count(s, c);
-	split = (char **)malloc (sizeof(char *) * num + 1);
-	if (!split)
-		return (0);
-	i = 0;
-	while (*s)
-	{
-		while (*s && *s == c)
-			s++;
-		if (*s && *s != c)
-		{
-			split[i] = string(s, c);
-			i++;
-			while (*s && *s != c)
-				s++;
-		}
-	}
-	split[i] = 0;
-	return (split);
+		return (NULL);
+	n_str = count(s, c);
+	str = (char **)malloc(sizeof(char *) * (n_str + 1));
+	if (!str)
+		return (NULL);
+	str = split(str, s, c, n_str);
+	if (str == NULL)
+		return (NULL);
+	str[n_str] = NULL;
+	return (str);
 }

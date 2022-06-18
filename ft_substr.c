@@ -6,37 +6,34 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 01:48:51 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/11 15:33:56 by gryongfa         ###   ########.fr       */
+/*   Updated: 2022/06/18 12:49:52 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
 
-char	*ft_substr(char	const *s, unsigned int	strat, size_t	len)
+char	*ft_substr(char	const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	char	*new;
-	size_t i;
-	size_t x;
+	char	*s1;
+	size_t	i;
 
-	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) <= start || len == 0)
+		return (ft_strdup(""));
+	if (strlen(s) - start < len)
+		len = strlen(s) - start;
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
-		return (0);
-
+		return (NULL);
+	s1 = str;
 	i = 0;
-	x = 0;
-	new = str;
-	while (s[i])
+	while (s[i] && i < len)
 	{
-		if (strat <= i && x < len)
-		{
-			new[x] = s[i];
-			x++;
-		}
+		s1[i] = s[i + start];
 		i++;
 	}
-	new[x] = '\0';
+	s1[i] = '\0';
 	return (str);
 }
