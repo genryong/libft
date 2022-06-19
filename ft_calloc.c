@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:40:50 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/17 02:46:25 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/19 13:09:11 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	*ft_calloc(size_t count, size_t	size)
 		count = 1;
 		size = 1;
 	}
-	if (!(count <= SIZE_MAX / size))
-		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
