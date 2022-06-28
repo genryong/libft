@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 02:18:39 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/15 05:56:17 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/25 04:42:09 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	char *str;
+	
+	str = (char *)s;
+	if ((char) c == '\0')
+		return (&str[ft_strlen(str)]);
+	while (*str)
 	{
-		if (*s == (unsigned char) c)
-			return ((char *) s);
-		s++;
+		if (*str == (char) c)
+			return (str);
+		str++;
 	}
-	if ((unsigned char) c == '\0')
-		return ((char *) s);
 	return (NULL);
 }

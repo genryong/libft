@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 22:14:39 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/15 06:09:19 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/21 00:20:51 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	*ft_strtrim(char	const *s1, char	const *set)
 {
 	char	*new;
 
+	if (!s1 || !set)
+		return (NULL);
 	new = (char *)malloc(sizeof(char) * get_len(s1, set));
 	if (!new)
 		return (NULL);
