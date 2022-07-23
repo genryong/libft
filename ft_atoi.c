@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 20:37:19 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/28 13:38:49 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/06/29 14:30:44 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,4 @@ int ft_atoi(const char *str)
 		str++;
 	}
 	return (num * neg);
-}
-
-int main (void)
-{
-	char str[] = "1234";
-	
-	ft_atoi(str);
-	printf("%s", str);
-
-	return (0); 
 }

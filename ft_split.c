@@ -6,11 +6,12 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 02:54:06 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/18 14:13:25 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/22 01:36:53 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static	int	count(char	const *s, char c)
 {
@@ -81,8 +82,24 @@ char	**ft_split(char	const *s, char c)
 	if (!str)
 		return (NULL);
 	str = split(str, s, c, n_str);
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	str[n_str] = NULL;
 	return (str);
 }
+
+// int				main(void)
+// {
+// 	char	**tab;
+// 	unsigned int	i;
+
+// 	i = 0;
+// 	tab = ft_split("AAbbBBbbCC", 'b');
+// 	if (!tab[0])
+// 		ft_putendl_fd("ok\n", 1);
+// 	while (tab[i] != NULL)
+// 	{
+// 		ft_putendl_fd(tab[i], 1);
+// 		i++;
+// 	}
+// }

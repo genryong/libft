@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 02:18:39 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/25 04:42:09 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/06 02:15:56 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,12 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	char s[] = "abcdefg";
+
+// 	printf ("%d\n", ft_strchr(s, '\0'));
+
+// 	printf ("%d\n", strchr(s, '\0'));
+// }

@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 13:38:27 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/25 04:22:32 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/13 15:21:53 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,28 @@
 
 char	*ft_strrchr(const char	*s, int c)
 {
-	int	i;
-	
-	i = 0;
-	while (s[i])
-		i++;
-	while (0 <= i)
+	char *str;
+
+	str = NULL;
+	while (*s != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		if (*s == (char) c)
+			str = (char *) s;
+		s++;
 	}
-	return (NULL);
+	if (c == '\0')
+		return ((char *)s);
+	return  (str);
 }
+
+// int main(void)
+// {
+// 	char s[] = "aaaa";
+
+
+// 	printf ("%s\n", ft_strrchr(s, 'b'));
+
+// 	// printf ("%s", strrchr(s, '\0'));
+
+// 	return (0);
+// }

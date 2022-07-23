@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 00:20:20 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/25 04:19:14 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/13 14:03:33 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char	*haystack, const char	*needle, size_t len)
 	size_t	n_len;
 	char	*h;
 	
+	if (haystack == NULL)
+		return (NULL);
 	h = (char *)haystack;
 	n_len = ft_strlen(needle);
 	if (n_len == 0)

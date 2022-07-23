@@ -6,7 +6,7 @@
 #    By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 21:17:56 by genryongfa        #+#    #+#              #
-#    Updated: 2022/06/19 22:05:29 by genryongfa       ###   ########.fr        #
+#    Updated: 2022/07/13 15:00:35 by genryongfa       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,9 +31,6 @@ NAME = libft.a
 rm = rm -f
 
 all: ${NAME}
-
-%.o: %.c
-	${CC} ${CFLAGS} -c -o $@ $^
 
 ${NAME}: ${OBJS}
 	ar rcs ${NAME} ${OBJS}

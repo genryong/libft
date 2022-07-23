@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:25:32 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/27 23:15:52 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/22 01:21:56 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,3 @@ void	*ft_memmove(void *dest, const void *src, size_t	n)
 	}
 	return (dest);
 }
-
-// int main (void)
-// {
-// 	char d[] = 0;
-// 	char s[] = 0;
-
-// 	memmove(d, s, 3);
-
-// 	printf("%s", d);
-
-// 	return (0);
-// }
