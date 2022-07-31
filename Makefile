@@ -6,7 +6,7 @@
 #    By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 21:17:56 by genryongfa        #+#    #+#              #
-#    Updated: 2022/07/13 15:00:35 by genryongfa       ###   ########.fr        #
+#    Updated: 2022/07/25 23:49:36 by genryongfa       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,5 +44,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-

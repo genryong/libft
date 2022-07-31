@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:38:23 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/15 05:52:15 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/30 01:47:37 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 void	ft_putendl_fd(char	*s, int fd)
 {
-	char	n;
-
-	n = '\n';
 	if (!s)
 		return ;
-	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
-	write (fd, &n, 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

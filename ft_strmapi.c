@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 23:35:13 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/07/13 15:28:37 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/30 02:12:16 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,3 @@ char	*ft_strmapi(char	const	*s, char (*f)(unsigned	int, char))
 	result[i] = '\0';
 	return (result);
 }
-
-// char tokyo(unsigned int i, char c)
-// {
-// 	char a;
-// 	int j;
-
-// 	j = i + 1;
-// 	while(j--)
-// 	{
-// 		a = c;
-// 	}
-// 	return (a);
-// }
-
-// int main(void)
-// {
-// 	printf("%s", ft_strmapi("abcdefg", tokyo));
-// 	return (0);
-// }

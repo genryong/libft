@@ -6,16 +6,16 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 22:14:39 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/07/13 15:23:14 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/31 20:36:43 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t start;
-	size_t end;
+	size_t	start;
+	size_t	end;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -27,13 +27,3 @@ char *ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr((char *)s1, start, end - start + 1));
 }
-
-// int main(void)
-// {
-// 	char s1[] = "aaabaabcd";
-// 	char str[] = "abcdef";
-
-// 	printf("%s\n", ft_strtrim(s1, str));
-
-// 	return (0);
-// }

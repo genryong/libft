@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 01:38:14 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/25 04:03:40 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/26 01:12:55 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t slen;
-	size_t i;
-	
+	size_t	slen;
+	size_t	i;
+
 	slen = ft_strlen(src);
 	if (!dstsize)
 		return (slen);

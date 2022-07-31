@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 23:53:05 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/07/13 15:08:27 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/30 02:12:01 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s + i);
+		f(i, &s[i]);
 		i++;
 	}
 }
-
-// void tokyo(unsigned int i, char *str)
-// {
-// 	printf ("%d、%c", 3, *str);
-// }
-// int main (void)
-// {
-// 	ft_striteri("sflskjdlfkjsl", tokyo);
-// 	return (0);
-// }

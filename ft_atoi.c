@@ -6,22 +6,22 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 20:37:19 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/29 14:30:44 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/26 01:15:01 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int num;
-	int neg;
+	int	num;
+	int	neg;
 
 	num = 0;
 	neg = -1;
 	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v'
-			|| *str == '\f' || *str == '\r')
-			str++;
+		|| *str == '\f' || *str == '\r')
+		str++;
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
