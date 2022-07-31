@@ -6,7 +6,7 @@
 /*   By: genryongfa <genryongfa@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 06:11:43 by genryongfa        #+#    #+#             */
-/*   Updated: 2022/06/23 05:34:10 by genryongfa       ###   ########.fr       */
+/*   Updated: 2022/07/31 20:43:59 by genryongfa       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-# include <stdio.h>
-# include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
